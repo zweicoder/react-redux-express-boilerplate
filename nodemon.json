@@ -1,0 +1,18 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "delay": "1.5",
+  "execMap": {
+    "js": "node"
+  },
+  "events": {
+    "restart": "notify-send ' Restarting server.. ─=≡Σ((( つ◕_◕)つ' -t 1000"
+  },
+  "watch": [
+    "server/"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}

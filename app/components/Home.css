@@ -1,0 +1,29 @@
+.container {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 5rem;
+}
+
+.container a {
+  font-size: 1.4rem;
+}
+
+.logo {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: center;
+    color: transparent;
+    font-size: 0px;
+    background-image: url("/static/barney.jpg");
+    background-size: 250px 200px;
+    width: 250px;
+    height: 200px;
+}
