@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
@@ -34,23 +36,23 @@ if (isDeveloping) {
     log: console.log,
     path: '/__webpack_hmr',
     heartbeat: 10 * 1000
-  })
+  });
 
   app.use(devMiddleware);
   app.use(hotMiddleware);
-  app.get('*', function response(req, res) {
+  app.get('*', (req, res) => {
     res.write(devMiddleware.fileSystem.readFileSync(path.resolve(__dirname, '../dist/index.html')));
     res.end();
   });
 } else {
   console.log('Server started in production mode.');
   app.use(express.static(path.join(__dirname, '../dist')));
-  app.get('*', function response(req, res) {
+  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
   });
 }
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+app.listen(port, '0.0.0.0', (err) => {
   if (err) {
     console.log(err);
   }

@@ -10,7 +10,9 @@
     "consistent-return": 0,
     "comma-dangle": 0,
     "no-use-before-define": 0,
-    "import/no-unresolved": [2, { ignore: ['electron'] }],
+    "func-names": 0,
+    "max-len":1,
+    "padded-blocks": 0,
     "react/jsx-no-bind": 0,
     "react/prefer-stateless-function": 0
   },
