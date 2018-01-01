@@ -44,10 +44,10 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel-loader'
     }, {
       test: /\.json?$/,
-      loader: 'json'
+      loader: 'json-loader'
     }, {
       test: /\.global\.css$/,
       loader: ExtractTextPlugin.extract(
